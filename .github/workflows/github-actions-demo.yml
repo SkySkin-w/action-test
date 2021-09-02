@@ -13,4 +13,4 @@ jobs:
       uses: fluttercandies/no-free-usage-action@v1.0.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        words:  'Please file the issue after you starred and forked the repo. Thanks! 🙂'
+        words: 'Please file the issue after you starred and forked the repo. Thanks! 🙂'
