@@ -2,7 +2,7 @@ name: No Free usage issue checker
 
 on:
   issues:
-    types: [opened, reopened, created]
+    types:[opened, reopened, created]
 
 jobs:
   build:
