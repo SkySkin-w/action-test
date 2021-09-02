@@ -1,19 +1,15 @@
-name: No Free usage issue checker
-
 on:
-  issues:
-    types:[opened, reopened, created]
+  issues:
+    types: [opened, reopened]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build:
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Check issue actor
-        uses: fluttercandies/no-free-usage-action@v1.0.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # 由GitHub提供的临时Token，必须在此处进行传递，且必须为这个值。
-          forked: '--no-forked'
-          starred:'--no-starred'
-          words:  'Please file the issue after you starred and forked the repo. Thanks! 🙂'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check issue actor
+      uses: fluttercandies/no-free-usage-action@v1.0.1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
